@@ -1,3 +1,4 @@
+// this function get user data and sign in
 function getUserData() {
     let userEmail = document.getElementById("exampleInputEmail1").value
     let userPass = document.getElementById("exampleInputPassword1").value
@@ -10,6 +11,7 @@ function getUserData() {
         console.log("emoail" , userEmail) 
         localStorage.setItem("password", userPass)
         window.location = "categories.html"
+
     // }
 }
 
