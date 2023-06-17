@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>E-LAW - Law Firm Website </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Law Firm Website Template" name="keywords">
+    <meta content="Law Firm Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!--  Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+    .login-form {
+        width: 30%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .logo {
+        width: 20%;
+        margin: 10px 0;
+    }
+
+    .signup-link {
+        margin-top: 10px;
+    }
+
+    .custom-submit {
+        width: 100%;
+    }
+
+    .custom-submit:hover {
+        /* width: 100%; */
+        background-color: bisque;
+        color: black;
+        transition: 0.5s ease-in-out;
+        border: bisque 1px solid;
+    }
+
+    body {
+        background: #f9fafc !important;
+    }
+</style>
+
+<body>
+    <form class="login-form">
+        <img src="./img/WhatsApp_Image.png" class="logo" alt="">
+        <div class="mb-3">
+            <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1"
+                >
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="mb-3">
+            <!-- <label for="exampleInputPassword1" class="form-label">Password</label> -->
+            <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="btn btn-dark custom-submit" onclick="getUserData()">Login</div>
+        <div class="signup-link">
+            <a href="signup.html">if you Don't have an account please signup</a>
+
+        </div>
+    </form>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
