@@ -25,3 +25,7 @@ function isAuth() {
         window.location = "/Login.html"
     }
 }
+function weeklyPay(amount){
+    localStorage.setItem("amount", amount)
+}
+
