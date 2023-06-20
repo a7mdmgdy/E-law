@@ -2,15 +2,11 @@
 function getUserData() {
     let userEmail = document.getElementById("exampleInputEmail1").value
     let userPass = document.getElementById("exampleInputPassword1").value
-    console.log("emoail" , userEmail) 
-
-    // if (userEmail ="" || userPass == "") {
-    //     console.log("please enter your data")
-    // }else if(userEmail && userPass){
-        localStorage.setItem("email", userEmail)
-        console.log("emoail" , userEmail) 
-        localStorage.setItem("password", userPass)
-        window.location = "categories.html"
+    console.log("emoail", userEmail)
+    localStorage.setItem("email", userEmail)
+    console.log("emoail", userEmail)
+    localStorage.setItem("password", userPass)
+    window.location = "categories.html"
 
     // }
 }
