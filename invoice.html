@@ -28,13 +28,24 @@
 
 <body>
     <style>
-        .pay-wrapper{
+        .pay-wrapper {
             position: relative;
         }
-        .payment-cards{
+
+        .payment-cards {
             display: flex;
             justify-content: space-evenly !important;
-            margin-top:10%
+            margin-top: 5%
+        }
+        .custom-bg{
+            background-color: bisque;
+        }
+        .card-text{
+            color: black !important;
+        }
+        .card-body{
+            display: flex !important;
+            justify-content: space-between;
         }
     </style>
     <div class="wrapper">
@@ -51,7 +62,7 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="index2.html" class="nav-item nav-link active">Home</a>
+                            <a href="index2.html" class="nav-item nav-link">Home</a>
 
 
                             <div class="nav-item dropdown">
@@ -81,33 +92,45 @@
         <!-- Nav Bar End -->
         <div class="pay-wrapper">
             <div class="payment-cards">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./img/vodafone.jpg" alt="Card image cap">
+                <div class="card card-text custom-bg  mb-3">
+                    <div class="card-header">Invoice</div>
                     <div class="card-body">
-                      <p class="card-text">Pay With Vodafone Cash</p>
-                    </div>
-                    <a type="button" class="btn btn-dark px-5" href="./packages.html">Choose Your Package</a>
-                  </div>
-                  <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="./img/fawry.png" alt="Card image cap">
+                        <p class="mr-5 ml-1">Date & Time : </p>
+                        <p id="date"></p>
+                     </div>
+
                     <div class="card-body">
-                      <p class="card-text">Pay With Fawry</p>
-                    </div>
-                    <a type="button" class="btn btn-dark px-5" href="./packages.html">Choose Your Package</a>
-                  </div>
+                        <p class="mr-5 ml-1">amount : </p>
+                        <p  class="ml-5 mr-1" id="amount-para"></p>
+                     </div>
+
             </div>
-          </div>
+        </div>
+    </div>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-        <script src="js/index.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function showAmount() {
+            let amount = localStorage.getItem("amount")
+        
+            document.getElementById("amount-para").innerText = `pay ${amount} LE`;
+            // payment-btn
+        }
+        function getDate(){
+            document.getElementById("date").innerHTML = new Date()
+        }
+        showAmount()
+        getDate()
+    </script>
 </body>
 
 </html>
